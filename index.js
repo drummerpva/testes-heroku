@@ -22,9 +22,9 @@ const server = new ApolloServer({
   },
 });
 
-app.get('/', (req, res) => {
+/* app.get('/', (req, res) => {
   res.send('Hello Nodejs!' + process.env.PORT);
-});
+}); */
 
 server.applyMiddleware({ app });
 
