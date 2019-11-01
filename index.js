@@ -1,55 +1,34 @@
-const express = require("express");
+// require('dotenv/config');
+// const { ApolloServer } = require('apollo-server');
+const express = require('express');
+/* const { ApolloServer } = require('apollo-server-express');
+const { importSchema } = require('graphql-import');
+const resolvers = require('./resolvers');
+const context = require('./config/context');
+
+const schemaPath = './schema/index.graphql'; */
 const app = express();
-const mysql = require("mysql2");
-const fs = require("fs");
 
-const port = process.env.PORT || 3000;
-console.log(process.env.PORT);
-const connection = mysql.createConnection({
-  host: "us-cdbr-iron-east-02.cleardb.net",
-  user: "b4a233a820586a",
-  database: "heroku_7b047b086f614a8",
-  password: "94c84c05",
-  multipleStatements: true
-});
-// mysql://b4a233a820586a:94c84c05@us-cdbr-iron-east-02.cleardb.net/heroku_7b047b086f614a8?reconnect=true
-// console.log(process.env.CLEARDB_DATABASE_URL)
-// const connection = mysql.createConnection(process.env.CLEARDB_DATABASE_URL)
+const port = process.env.PORT || 4000;
 
-connection.connect(err => {
-  if (!err) {
-    console.log("connected to db.");
-  }
-  connection.query(`show tables like 'contacts'`, (err, rows) => {
-    if (rows.length === 0) {
-      const sql = String(fs.readFileSync("./db.sql"));
-      connection.query(sql, err => {
-        if (!err) {
-          console.log("database created.");
-        }
-      });
-    }
-  });
+/* const server = new ApolloServer({
+  typeDefs: importSchema(schemaPath),
+  resolvers,
+  context,
+  playground: true,
+  introspection: true,
+  cors: {
+    origin: '*',
+  },
+}); */
+
+app.get('/', (req, res) => {
+  res.send('Hello Nodejs!' + process.env.PORT);
 });
 
-app.get("/", (req, res) => {
-  res.send("Hello DevPleno!" + process.env.PORT);
-});
-app.get("/contacts", (req, res) => {
-  connection.query("select * from contacts", (err, rows) => {
-    if (err) {
-      res.send({
-        error: "error connecting to db"
-      });
-    } else {
-      res.send(rows);
-    }
-  });
-});
+/* server.applyMiddleware({ app }); */
+
 app.listen(port, err => {
-  if (!err) {
-    console.log("server listening on port", port);
-  } else {
-    console.log(err);
-  }
+  if (!err) console.log('Apollo server on');
+  else console.log(err);
 });
