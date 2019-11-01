@@ -33,7 +33,7 @@ connection.connect(err => {
 });
 
 app.get("/", (req, res) => {
-  res.send("Hello DevPleno!", process.env.PORT);
+  res.send("Hello DevPleno!" + process.env.PORT);
 });
 app.get("/contacts", (req, res) => {
   connection.query("select * from contacts", (err, rows) => {
