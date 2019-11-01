@@ -4,6 +4,7 @@ const mysql = require('mysql2')
 const fs = require('fs')
 
 const port = process.env.PORT || 3000
+console.log(process.env.PORT);
 const connection = mysql.createConnection({
   host: 'us-cdbr-iron-east-02.cleardb.net',
   user: 'b4a233a820586a',
