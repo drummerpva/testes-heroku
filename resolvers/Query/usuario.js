@@ -1,5 +1,5 @@
 const db = require('../../config/db');
-const bcrypt = require('bcrypt-nodejs');
+const bcrypt = require('bcrypt');
 const { getUsuarioLogado } = require('../Comum/Usuario');
 
 module.exports = {
