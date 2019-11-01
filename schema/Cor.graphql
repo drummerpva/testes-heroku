@@ -1,0 +1,11 @@
+type Cor {
+  id: Int
+  nome: String!
+  editable: Int
+}
+input CorInput {
+  nome: String!
+}
+input CorFiltro {
+  nome: String
+}

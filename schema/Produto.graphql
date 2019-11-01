@@ -1,0 +1,24 @@
+type Produto {
+  id: String
+  referencia: String
+  nome: String
+  unidade: String
+  quantidade: Float
+  quantidade_calculo: Float
+  valor: Float
+  peso: Float
+  editable: Int
+}
+input ProdutoInput {
+  referencia: String
+  nome: String!
+  unidade: String!
+  quantidade: Float
+  quantidade_calculo: Float!
+  valor: Float
+  peso: Float!
+}
+input ProdutoFiltro {
+  nome: String
+  referencia: String
+}

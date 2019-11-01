@@ -1,0 +1,42 @@
+type Mutation {
+  #Clientes
+  novoCliente(dados: ClienteInput!): Cliente!
+  alterarCliente(id: ID!, dados: ClienteInput!): Cliente!
+  excluirCliente(id: ID!): Boolean
+
+  novoVendedor(dados: VendedorInput!): Vendedor!
+  alterarVendedor(id: ID!, dados: VendedorInput!): Vendedor!
+  excluirVendedor(id: ID!): Boolean
+
+  novoFuncionario(dados: FuncionarioInput!): Funcionario!
+  alterarFuncionario(id: ID!, dados: FuncionarioInput!): Funcionario!
+  excluirFuncionario(id: ID!): Boolean
+
+  novoSetor(dados: SetorInput!): Setor!
+  alterarSetor(id: ID!, dados: SetorInput!): Setor!
+  excluirSetor(id: ID!): Boolean
+
+  novoFornecedor(dados: FornecedorInput!): Fornecedor!
+  alterarFornecedor(id: ID!, dados: FornecedorInput!): Fornecedor!
+  excluirFornecedor(id: ID!): Boolean
+
+  novoProduto(dados: ProdutoInput!): Produto!
+  alterarProduto(id: ID!, dados: ProdutoInput!): Produto!
+  excluirProduto(id: ID!): Boolean
+
+  novoCor(dados: CorInput!): Cor!
+  alterarCor(id: ID!, dados: CorInput!): Cor!
+  excluirCor(id: ID!): Boolean
+
+  novoUsuario(dados: UsuarioInput!): Usuario!
+  alterarUsuario(id: ID!, dados: UsuarioInput!): Usuario!
+  excluirUsuario(id: ID!): Boolean
+
+  novoStatusCotacao(dados: StatusCotacaoInput!): StatusCotacao!
+  alterarStatusCotacao(id: ID!, dados: StatusCotacaoInput!): StatusCotacao!
+  excluirStatusCotacao(id: ID!): Boolean
+
+  novoCotacaoC(dados: CotacaoCInput!): CotacaoC!
+  alterarCotacaoC(id: ID!, dados: CotacaoCInput!): CotacaoC!
+  excluirCotacaoC(id: ID!): Boolean
+}

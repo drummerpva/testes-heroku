@@ -1,0 +1,28 @@
+type Usuario {
+  id: String
+  pessoa: Pessoa
+  tipoPessoa: TipoPessoa
+  pessoa_id: ID
+  tipo_pessoa_id: ID
+  email: String
+  token: String
+  obs: String
+  editable: Int
+}
+
+input UsuarioLoginInput {
+  email: String!
+  senha: String!
+}
+
+input UsuarioInput {
+  pessoa_id: ID!
+  tipo_pessoa_id: ID!
+  email: String!
+  senha: String
+  senha_antiga: String
+  obs: String
+}
+input UsuarioFiltro {
+  email: String
+}

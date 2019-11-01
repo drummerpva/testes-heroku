@@ -1,0 +1,23 @@
+type CotacaoD {
+  produto: Produto
+  cor: Cor
+  cor_id: ID
+  produto_id: ID
+  quantidade: Float
+  quantidade_calculo: Float
+  valor_unitario: Float
+  peso_unitario: Float
+  peso_total: Float
+  valor_total: Float
+}
+input CotacaoDInput {
+  produto_id: ID!
+  cor_id: ID!
+  quantidade: Float
+  quantidade_calculo: Float
+  valor_unitario: Float
+  peso_unitario: Float
+}
+input CotacaoDFiltro {
+  data: String
+}

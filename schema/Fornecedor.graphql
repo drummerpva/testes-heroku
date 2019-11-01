@@ -1,0 +1,46 @@
+type Fornecedor {
+  id: Int
+  tipoPessoa: TipoPessoa
+  nome: String!
+  cpf_cnpj: String!
+  fantasia: String
+  tipo: String
+  ie: String
+  regime: String
+  endereco: String
+  numero: String
+  bairro: String
+  complemento: String
+  cidade: String!
+  uf: String!
+  cep: String
+  fone_fixo: String
+  fone_celular: String
+  email: String
+  obs: String
+  status: String
+  editable: Int
+}
+input FornecedorInput {
+  nome: String!
+  cpf_cnpj: String!
+  fantasia: String
+  tipo: String
+  ie: String
+  regime: String
+  endereco: String
+  numero: String
+  bairro: String
+  complemento: String
+  cidade: String!
+  uf: String!
+  cep: String
+  fone_fixo: String
+  fone_celular: String
+  email: String
+  obs: String
+}
+input FornecedorFiltro {
+  nome: String
+  cpf_cnpj: String
+}

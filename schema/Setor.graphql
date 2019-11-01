@@ -1,0 +1,12 @@
+type Setor {
+  id: String
+  nome: String!
+  integrantes: [Funcionario]
+  editable: Int
+}
+input SetorInput {
+  nome: String!
+}
+input SetorFiltro {
+  nome: String
+}

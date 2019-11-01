@@ -1,0 +1,11 @@
+type StatusCotacao {
+  id: Int
+  nome: String!
+  editable: Int
+}
+input StatusCotacaoInput {
+  nome: String!
+}
+input StatusCotacaoFiltro {
+  nome: String
+}

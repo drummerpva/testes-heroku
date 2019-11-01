@@ -1,0 +1,15 @@
+type TipoPessoa {
+  id: String
+  integrantes: [Pessoa]
+  nome: String
+}
+input TipoPessoaInput {
+  nome: String!
+}
+type Pessoa {
+  nome: String
+  cpf_cnpj: String
+  fone_fixo: String
+  fone_celular: String
+  cidade: String
+}

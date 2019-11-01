@@ -1,0 +1,45 @@
+type CotacaoC {
+  id: String
+  vendedor: Vendedor
+  cliente: Cliente
+  andamento: StatusCotacao
+  produtos: [CotacaoD]
+  cliente_id: ID
+  data: String
+  data_entrega: String
+  valor_produtos: Float
+  valor_frete: Float
+  valor_imposto: Float
+  valor_adicional: Float
+  valor_total: Float
+  valor_total_desconto: Float
+  valor_por_quilo: Float
+  peso_total: Float
+  porcentagem_desconto: Float
+  forma_pagamento: String
+  status_cotacao_id: String
+  obs: String
+  comissao: Int
+  solicitar_aprovacao: String
+  editable: Int
+}
+input CotacaoCInput {
+  cliente_id: ID
+  status_cotacao_id: ID
+  produtos: [CotacaoDInput]
+  data: String
+  valor_produtos: Float
+  valor_frete: Float
+  valor_imposto: Float
+  valor_adicional: Float
+  valor_por_quilo: Float
+  porcentagem_desconto: Float
+  forma_pagamento: String
+  peso_total: Float
+  solicitar_aprovacao: String
+  comissao: Int
+  obs: String
+}
+input CotacaoCFiltro {
+  data: String
+}

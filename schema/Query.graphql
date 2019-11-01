@@ -1,0 +1,36 @@
+# Pontos de entrada da sua API!
+type Query {
+  clientes(filtro: ClienteFiltro): [Cliente]
+  cliente(id: ID!): Cliente
+
+  vendedores(filtro: VendedorFiltro): [Vendedor]
+  vendedor(id: ID!): Vendedor
+
+  funcionarios(filtro: FuncionarioFiltro): [Funcionario]
+  funcionario(id: ID!): Funcionario
+
+  setores(filtro: SetorFiltro): [Setor]
+  setor(id: ID!): Funcionario
+
+  fornecedores(filtro: FornecedorFiltro): [Fornecedor]
+  fornecedor(id: ID!): Fornecedor
+
+  produtos(filtro: ProdutoFiltro): [Produto]
+  produto(id: ID!): Produto
+
+  cores(filtro: CorFiltro): [Cor]
+  cor(id: ID!): Cor
+
+  usuarios(filtro: UsuarioFiltro): [Usuario]
+  usuario(id: ID!): Usuario
+
+  statusCotacoes(filtro: StatusCotacaoFiltro): [StatusCotacao]
+  statusCotacao(id: ID!): StatusCotacao
+
+  cotacoesC(filtro: CotacaoCFiltro): [CotacaoC]
+  cotacaoC(id: ID!): CotacaoC
+
+  tiposPessoas: [TipoPessoa]
+
+  login(dados: UsuarioLoginInput!): Usuario
+}
