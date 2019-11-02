@@ -12,4 +12,5 @@ type Pessoa {
   fone_fixo: String
   fone_celular: String
   cidade: String
+  min_valor_kg: Float
 }
