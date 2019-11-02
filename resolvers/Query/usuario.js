@@ -13,6 +13,11 @@ module.exports = {
 
     return getUsuarioLogado(usuario);
   },
+  logado(_, __, ctx) {
+    if (ctx && ctx.usuario) {
+      return ctx.usuario;
+    } else return null;
+  },
   usuarios(_, { filtro }, ctx) {
     ctx && ctx.validarLogado();
     if (!filtro) return db('usuarios').select();

@@ -33,4 +33,5 @@ type Query {
   tiposPessoas: [TipoPessoa]
 
   login(dados: UsuarioLoginInput!): Usuario
+  logado: Usuario
 }
