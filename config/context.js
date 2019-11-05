@@ -24,18 +24,18 @@ module.exports = async ({ req }) => {
     }
   }
   if (usuario && usuario.tipo_pessoa_id) {
-    admin = usuario.tipo_pessoa_id === 5;
-    vendedor = usuario.tipo_pessoa_id === 2;
-    funcionario = usuario.tipo_pessoa_id === 3;
+    admin = parseInt(usuario.tipo_pessoa_id) === 5;
+    vendedor = parseInt(usuario.tipo_pessoa_id) === 2;
+    funcionario = parseInt(usuario.tipo_pessoa_id) === 3;
   }
 
-  // console.log(usuario);
   const err = new Error('Acesso negado!');
 
   return {
     usuario,
     admin,
     vendedor,
+    funcionario,
     validarUsuario() {
       if (!usuario) throw err;
     },

@@ -3,7 +3,7 @@ const db = require('../../config/db');
 module.exports = {
   statusCotacoes(_, { filtro }, ctx) {
     ctx && ctx.validarLogado();
-    if (!filtro) return db('cores').select();
+    if (!filtro) return db('status_cotacao').select().where({status: '1'})
     return filtro.nome
       ? db('status_cotacao')
           .select()
