@@ -9,7 +9,7 @@ exports.up = function(knex) {
         .onUpdate('NO ACTION');
     })
     .then(() => {
-      return knex.insert('usuarios').insert([
+      return knex('usuarios').insert([
         {
           pessoa_id: 1,
           email: 'admin@admin.com',
