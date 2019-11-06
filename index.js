@@ -15,7 +15,7 @@ const server = new ApolloServer({
   typeDefs: importSchema(schemaPath),
   resolvers,
   context,
-  playground: true,
+  playground: false,
   introspection: true,
   cors: {
     origin: '*',
