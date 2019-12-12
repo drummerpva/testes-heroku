@@ -5,6 +5,10 @@ exports.up = function(knex) {
     table.string('nome', 50).notNull();
     table.string('status', 1).defaultTo('1');
     table.timestamps(true, true);
+  }).then(() => {
+    return knex('setores').insert([
+      {nome: 'ADMINISTRAÇÃO'}
+    ]);
   });
 };
 
