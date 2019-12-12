@@ -58,7 +58,11 @@ module.exports = {
   },
   editable(cotacaoC, __, ctx) {
     if (ctx.admin) return 0;
-    if (parseInt(cotacaoC.status_cotacao_id) === 1) return 1;
+    if (
+      parseInt(cotacaoC.status_cotacao_id) === 1 ||
+      parseInt(cotacaoC.status_cotacao_id) === 10
+    )
+      return 1;
     return 0;
   },
   data(cotacao) {
